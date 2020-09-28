@@ -58,7 +58,7 @@ export default class ResultSearch extends Component {
                                 }
                                 {
                                     this.props.totalData > 10 &&
-                                        this.props.remainingdata !== 0 &&
+                                        this.props.totalData > this.props.loadeddata &&
                                             <div className="result-search-wrapper__action text-center">
                                                 <CButton
                                                     onclick={this.props.onclick}

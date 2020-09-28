@@ -12,6 +12,7 @@ export default class index extends Component {
             loadedData : 10,
             remainingData : 0,
             searchKeyword : '',
+            totalData: 0,
             country : [],
             searchResult : []
         }
@@ -26,18 +27,20 @@ export default class index extends Component {
     handleSubmit = () => {
         let searchKeyword = this.state.searchKeyword;
         this.setState({
-            ...this.setState, isSearching : true
+            ...this.state, isSearching : true
         });
 
         this.getUniversityByKeyword(searchKeyword);
     }
 
     handleLoadMore = () => {
-        let addLoaded = this.state.remainingData > 10 ? 10 : this.state.remainingData;
-
-        this.setState({
-            ...this.state, loadedData : this.state.loadedData += addLoaded, 
-                remainingData : this.state.searchResult.length - this.state.loadedData
+        this.setState((prevState) => {
+            let addLoaded = prevState.remainingData > 10 ? 10 : prevState.remainingData;
+            return{
+                ...this.state, 
+                    loadedData : prevState.loadedData + addLoaded, 
+                    remainingData : prevState.remainingData - addLoaded
+            }
         })
     }
 
@@ -45,7 +48,7 @@ export default class index extends Component {
         if(event.key === 'Enter'){
             let searchKeyword = this.state.searchKeyword;
             this.setState({
-                ...this.setState, isSearching : true
+                ...this.state, isSearching : true
             });
 
             this.getUniversityByKeyword(searchKeyword);
@@ -70,9 +73,9 @@ export default class index extends Component {
                         isSearching: false, 
                         isFirstTime : false, 
                         loadedData : 10,
-                        remainingData : result.length - this.state.loadedData
+                        remainingData : result.length > 10 ? result.length - 10 : result.length,
+                        totalData : +result.length
                 });
-
         });  
     }
     

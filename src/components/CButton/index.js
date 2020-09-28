@@ -36,6 +36,9 @@ const CButton = (props) => {
 }
 
 CButton.propTypes = {
+    type        : propTypes.string,
+    isInverse   : propTypes.bool,
+    isSmall     : propTypes.bool,
     isLoading   : propTypes.bool,
     isDisabled  : propTypes.bool,
     isBlock     : propTypes.bool,
