@@ -1,0 +1,49 @@
+.list-wrapper{
+    display: flex;
+    border: 1px solid #ECECEC;
+    padding: .8em 2em;
+    margin: 1em 0;
+    justify-content: space-between;
+    background-color: #FFF;
+
+    &__name{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+
+        p{
+            margin: 0;
+            font-family: 'Poppins';
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #747d8c;
+            letter-spacing: .5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 100%;
+        }
+    }
+
+    &__country{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p{
+            margin: 0;
+            font-family: 'Poppins';
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #747d8c;
+            letter-spacing: .5px;
+        }
+    }
+
+    &__action{
+        .btn{
+            font-size: .8rem;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.navbar-wrapper{
+    background: rgb(57,56,100);
+    background: linear-gradient(180deg, rgba(57,56,100,1) 0%, rgba(61,56,96,1) 100%);
+    padding: 1em 2em;
+
+    &__logo{
+        font-family: 'Poppins';
+        font-weight: bold;
+        color: #FFFFFF !important;
+        letter-spacing: 1px;
+    }
+
+    .btn{
+        font-family: 'Poppins';
+        font-weight: bold;   
+        padding: 0 1.8em;
+        border-radius: 90px; 
+        background-color: #FFFFFF;
+        color: rgb(57,56,100);
+        font-size: 1rem;
+    }
+}
+
+.modal-wrapper{
+    padding: 0 1em;
+
+    h2{
+        font-family: 'Poppins';
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 1em 0 1em;
+    }
+    .btn{
+        margin: 2em 0 1em;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+}

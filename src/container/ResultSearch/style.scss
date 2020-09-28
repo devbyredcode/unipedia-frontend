@@ -1,0 +1,47 @@
+.result-search-wrapper{
+    padding: 3em 0;
+
+    &__summary{
+        font-family: 'Poppins';
+        color: #4e4e4e;
+
+        b{
+            color: #ff7997;
+        }
+
+        i{
+            text-transform: capitalize;
+        }
+    }
+
+    &__countries{
+        .btn{
+            font-size: .6em;
+            margin: .5em .7em .5em 0;
+        }
+
+        p{
+            color: #3c3c3c;
+            font-size: 1em;
+            font-weight: 600;
+            font-family: 'Poppins';
+        }
+    }
+
+    &__home, &__result{
+        text-align: center;
+        padding: 1em 0;
+
+        svg{
+            font-size: 4.5em;
+            color: #ff7997;
+        }
+
+        p{
+            color: #3c3c3c;
+            margin: 2em 0;
+            font-size: 1.2em;
+            font-family: 'Poppins';
+        }
+    }
+}

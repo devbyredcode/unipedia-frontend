@@ -1,0 +1,66 @@
+a.btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:hover{
+        color: #FFFFFF;
+    }
+}
+
+.btn{
+    height: 35px;
+    font-family: 'Poppins';
+    font-size: .85em;
+    letter-spacing: .5px;
+    color: #FFFFFF;
+    background:#ff7997;
+    border: none;
+    min-width: 100px;
+
+    svg{
+        -webkit-animation:spin 2s linear infinite;
+        -moz-animation:spin 2s linear infinite;
+        animation:spin 2s linear infinite;
+        font-size: .8em;
+    }
+
+    &--rounded{
+        border-radius: 45px;
+    }
+
+    &--disabled{
+        pointer-events: none;
+        background-color: grey;
+    }
+
+    &--block{
+        width: 100%;
+        display: block;
+    }
+
+    &--transparent{
+        background-color: transparent !important;
+        color: #FFFFFF !important;
+    }
+
+    &--small{
+        font-size: .6em;
+    }
+
+    &--inverse{
+        background: #FFFFFF;
+        color: #393864;
+    }
+
+    &:hover, &:active, &:focus{
+        background:#ff7997;
+        opacity: .9;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

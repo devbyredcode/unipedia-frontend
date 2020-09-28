@@ -1,0 +1,41 @@
+.form-search{
+    padding: 3em 0;
+    background-color: #FFFFFF;
+
+    &__title{
+        text-align: center;
+        font-family: 'Poppins';
+
+        h1{
+            font-weight: 600;
+            color: #808080;
+        }
+
+        p{
+            margin: .8em 0;
+            font-size: 1.2rem;
+            color: #808080;
+        }
+    }
+
+    &__action{ 
+        width: 50%;
+        margin: 3em auto 1em;
+        position: relative;
+
+        .form-input{
+            border-radius: 90px;
+            padding: 1.4em;
+            color: #2F2F2F;
+            text-transform: capitalize;
+            border: 2px solid #2980b9;
+        }
+
+        button{
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
